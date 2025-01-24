@@ -29,6 +29,7 @@ set scrolloff=5
 set incsearch
 set relativenumber
 set notimeout
+set clipboard+=unnamed
 
 """ Idea specific settings ------------------
 set idearefactormode=keep
@@ -37,6 +38,9 @@ set idearefactormode=keep
 nnoremap <C-b> <C-d>zz
 nnoremap <C-u> <C-u>zz
 nnoremap <leader>j *``cgn
+" When deleting with x do not overwrite register
+nnoremap x "_x
+vnoremap p "_dP
 " nnoremap <leader>lw <cmd>set wrap!<CR>
 
 " Don't use Ex mode, use Q for formatting.
