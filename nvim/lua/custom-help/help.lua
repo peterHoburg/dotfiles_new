@@ -7,7 +7,7 @@ local data = {
 	{ "<leader>se", "make split windows equal width & height" },
 	{ "<leader>xs", "close current split window" },
 	{ "<leader>lw", "toggle line wrap" },
-	{ "<leader>j", "Replace wird under cursor" },
+	{ "<leader>j", "Replace word under cursor" },
 	{ "[d", "Go to previous diagnostic message" },
 	{ "]d", "Go to next diagnostic message" },
 	{ "<leader>d", "Open floating diagnostic message" },
