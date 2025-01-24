@@ -37,23 +37,29 @@ set idearefactormode=keep
 nnoremap <C-b> <C-d>zz
 nnoremap <C-u> <C-u>zz
 nnoremap <leader>j *``cgn
-nnoremap <leader>lw <cmd>set wrap!<CR>
+" nnoremap <leader>lw <cmd>set wrap!<CR>
 
 " Don't use Ex mode, use Q for formatting.
 map Q gq
+
 " Map <leader>d to start debug
 map <leader>d <Action>(Debug)
+
 " Map \b to toggle the breakpoint on the current line
 map <leader>b <Action>(ToggleLineBreakpoint)
+
 " Split window vertically
 map <leader>v <Action>(SplitVertically)
 map <leader>v <Action>(SplitHorizontally)
 map <leader>xs <Action>(CloseContent)
+map <ALT-q> <Action>(CloseContent)
 
+" Errors
 map [d <Action>(GotoNextError)
 map ]d <Action>(GotoPreviousError)
+map <leader>d <Action>(ActivateProblemsViewToolWindow)
 
-
+" Fuzzier
 map <Leader>pf <action>(com.mituuz.fuzzier.Fuzzier)
 map <Leader>mf <action>(com.mituuz.fuzzier.FuzzyMover)
 map <Leader>gf <action>(com.mituuz.fuzzier.FuzzierVCS)
@@ -71,25 +77,3 @@ sethandler <C-V> a:ide
 sethandler <C-X> a:ide
 sethandler <C-K> a:ide
 sethandler <C-R> a:ide
-
-"
-"
-"
-"
-"
-"
-"
-"
-"
-"
-"
-"
-"
-"
-"
-"
-"
-"
-"
-"
-"
