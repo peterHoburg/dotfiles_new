@@ -53,6 +53,7 @@ map <leader>v <Action>(SplitVertically)
 map <leader>v <Action>(SplitHorizontally)
 map <leader>xs <Action>(CloseContent)
 map <ALT-q> <Action>(CloseContent)
+map <S-<Esc>> <Action>(HideActiveWindow)
 
 " Errors
 map [d <Action>(GotoNextError)
@@ -66,6 +67,7 @@ map <Leader>gf <action>(com.mituuz.fuzzier.FuzzierVCS)
 
 " Map vim bindings to IDE actions. To get IDE actions set `IdeaVim: track action IDs` in the settings to true
 map <leader>e <Action>(ActivateProjectToolWindow)
+map <leader>t <Action>(ActivateTerminalToolWindow)
 
 sethandler <C-A> a:ide
 sethandler <C-C> a:ide
