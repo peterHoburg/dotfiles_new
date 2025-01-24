@@ -72,7 +72,7 @@ vim.keymap.set("n", "<leader>tn", ":tabn<CR>", opts) --  go to next tab
 vim.keymap.set("n", "<leader>tp", ":tabp<CR>", opts) --  go to previous tab
 
 -- Toggle line wrapping
-vim.keymap.set("n", "<leader>lw", "<cmd>set wrap!<CR>", opts) -- toggle line wrap
+vim.keymap.set("n", "<leader>lw", "<cmd>set wrap!<CR>", opts)
 
 -- Press jk fast to exit insert mode
 vim.keymap.set("i", "jk", "<ESC>", opts)
@@ -89,8 +89,7 @@ vim.keymap.set("v", "<A-k>", ":m .-2<CR>==", opts)
 -- Keep last yanked when pasting
 vim.keymap.set("v", "p", '"_dP', opts)
 
--- Replace word under cursor
-vim.keymap.set("n", "<leader>j", "*``cgn", opts)
+vim.keymap.set("n", "<leader>j", "*``cgn", opts) -- Replace word under cursor
 
 -- Explicitly yank to system clipboard (highlighted and entire row)
 vim.keymap.set({ "n", "v" }, "<leader>y", [["+y]])
@@ -103,9 +102,9 @@ vim.keymap.set("n", "<leader>do", function()
 	diagnostics_active = not diagnostics_active
 
 	if diagnostics_active then
-		vim.diagnostic.enable(0)
+		vim.diagnostic.enable(true)
 	else
-		vim.diagnostic.disable(0)
+		vim.diagnostic.enable(false)
 	end
 end)
 

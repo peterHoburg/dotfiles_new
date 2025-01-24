@@ -1,20 +1,19 @@
 local CustomHelp = {}
 
 local data = {
-	{ "Keybinding", "Description" },
 	{ "<leader>x", "close buffer" },
 	{ "<leader>v", "split window vertically" },
 	{ "<leader>h", "split window horizontally" },
 	{ "<leader>se", "make split windows equal width & height" },
 	{ "<leader>xs", "close current split window" },
-	{ "", "" },
-	{ "", "" },
-	{ "", "" },
-	{ "", "" },
-	{ "", "" },
-	{ "", "" },
-	{ "", "" },
-	{ "", "" },
+	{ "<leader>lw", "toggle line wrap" },
+	{ "<leader>j", "Replace wird under cursor" },
+	{ "[d", "Go to previous diagnostic message" },
+	{ "]d", "Go to next diagnostic message" },
+	{ "<leader>d", "Open floating diagnostic message" },
+	{ "<leader>q", "Open diagnostic list" },
+	{ "<leader>ss", "(S)ession (S)ave" },
+	{ "<leader>sl", "(S)ession (L)oad" },
 	{ "", "" },
 }
 local function format_row(col1, col2)
@@ -22,8 +21,6 @@ local function format_row(col1, col2)
 end
 
 function CustomHelp.show_help_window()
-	local text = CustomHelp.generate_text()
-
 	local help_lines = {}
 	for _, row in ipairs(data) do
 		table.insert(help_lines, format_row(row[1], row[2]))
@@ -49,6 +46,11 @@ function CustomHelp.show_help_window()
 
 	-- optional keymap to close
 	vim.api.nvim_buf_set_keymap(buf, "n", "q", "<cmd>close<CR>", {
+		nowait = true,
+		noremap = true,
+		silent = true,
+	})
+	vim.api.nvim_buf_set_keymap(buf, "n", "<ESC>", "<cmd>close<CR>", {
 		nowait = true,
 		noremap = true,
 		silent = true,
