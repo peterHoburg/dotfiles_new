@@ -49,8 +49,8 @@ map <leader>d <Action>(Debug)
 map <leader>b <Action>(ToggleLineBreakpoint)
 
 " Split window vertically
-map <leader>v <Action>(SplitVertically)
-map <leader>v <Action>(SplitHorizontally)
+map <leader>v <Action>(MoveTabRight)
+map <leader>h <Action>(MoveTabDown)
 map <leader>xs <Action>(CloseContent)
 map <ALT-q> <Action>(CloseContent)
 map <S-<Esc>> <Action>(HideActiveWindow)
