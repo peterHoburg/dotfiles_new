@@ -1,0 +1,62 @@
+ " You can find a list of commands here: https://jb.gg/h38q75
+" Find more examples here: https://jb.gg/share-ideavimrc
+
+
+""" Map leader to space ---------------------
+let mapleader = " "
+
+""" Plugins  --------------------------------
+" --- Enable IdeaVim plugins https://jb.gg/ideavim-plugins
+" Plugins that are NOT required to be installed inside the IDE
+Plug 'machakann/vim-highlightedyank'
+Plug 'tpope/vim-commentary'
+Plug 'preservim/nerdtree'
+Plug 'tpope/vim-surround'
+
+" Plugins that DO need to be installed inside the IDE
+" Install Fuzzier plugin https://plugins.jetbrains.com/plugin/23451-fuzzier
+" https://plugins.jetbrains.com/plugin/15976-which-key
+set which-key
+" https://plugins.jetbrains.com/plugin/19417-ideavim-quickscope
+set quickscope
+" https://plugins.jetbrains.com/plugin/25776-vim-peekaboo
+set peekaboo
+" https://plugins.jetbrains.com/plugin/25897-vim-functiontextobj
+set functiontextobj
+
+""" Common settings -------------------------
+set scrolloff=5
+set incsearch
+set relativenumber
+set notimeout
+
+""" Idea specific settings ------------------
+set idearefactormode=keep
+
+""" Mappings --------------------------------
+nnoremap <C-b> <C-d>zz
+nnoremap <C-u> <C-u>zz
+" Don't use Ex mode, use Q for formatting.
+map Q gq
+" Map <leader>d to start debug
+map <leader>d <Action>(Debug)
+" Map \b to toggle the breakpoint on the current line
+map <leader>b <Action>(ToggleLineBreakpoint)
+
+map <Leader>pf <action>(com.mituuz.fuzzier.Fuzzier)
+map <Leader>mf <action>(com.mituuz.fuzzier.FuzzyMover)
+map <Leader>gf <action>(com.mituuz.fuzzier.FuzzierVCS)
+
+" Map vim bindings to IDE actions. To get IDE actions set `IdeaVim: track action IDs` in the settings to true
+map <leader>e <Action>(ActivateProjectToolWindow)
+
+sethandler <C-A> a:ide
+sethandler <C-C> a:ide
+sethandler <C-D> a:vim
+sethandler <C-F> a:ide
+sethandler <C-S> a:ide
+sethandler <C-U> a:vim
+sethandler <C-V> a:ide
+sethandler <C-X> a:ide
+sethandler <C-K> a:ide
+sethandler <C-R> a:ide
