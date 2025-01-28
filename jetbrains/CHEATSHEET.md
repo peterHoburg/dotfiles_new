@@ -11,3 +11,9 @@ https://github.com/tpope/vim-surround
 
 ## Delete
 `ds<wrapper>`
+
+
+# Navigation
+
+C-i
+C-o

@@ -35,7 +35,7 @@ set clipboard+=unnamed
 set idearefactormode=keep
 
 """ Mappings --------------------------------
-nnoremap <C-b> <C-d>zz
+nnoremap <C-d> <C-d>zz
 nnoremap <C-u> <C-u>zz
 nnoremap <leader>j *``cgn
 " When deleting with x do not overwrite register
@@ -84,10 +84,12 @@ sethandler <C-A> a:ide
 sethandler <C-C> a:ide
 sethandler <C-D> a:vim
 sethandler <C-F> a:ide
+sethandler <C-I> a:vim
+sethandler <C-K> a:ide
+sethandler <C-O> a:vim
+sethandler <C-R> a:ide
 sethandler <C-S> a:ide
 sethandler <C-U> a:vim
 sethandler <C-V> a:ide
 sethandler <C-X> a:ide
-sethandler <C-K> a:ide
-sethandler <C-R> a:ide
 sethandler <A-]> a:vim
