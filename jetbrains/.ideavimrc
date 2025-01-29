@@ -47,7 +47,7 @@ vnoremap p "_dP
 map Q gq
 
 " Map <leader>d to start debug
-map <leader>d <Action>(Debug)
+map <leader>db <Action>(Debug)
 
 " Map \b to toggle the breakpoint on the current line
 map <leader>b <Action>(ToggleLineBreakpoint)
@@ -68,7 +68,7 @@ map <A-]> <Action>(PrevSplitter)
 " Errors
 map [d <Action>(GotoNextError)
 map ]d <Action>(GotoPreviousError)
-map <leader>d <Action>(ActivateProblemsViewToolWindow)
+map <leader>dw <Action>(ActivateProblemsViewToolWindow)
 
 " Fuzzier
 map <Leader>pf <action>(com.mituuz.fuzzier.Fuzzier)
@@ -81,6 +81,7 @@ map <leader>t <Action>(ActivateTerminalToolWindow)
 map <leader>r <Action>(ReopenClosedTab)
 
 sethandler <C-A> a:ide
+sethandler <C-B> a:vim
 sethandler <C-C> a:ide
 sethandler <C-D> a:vim
 sethandler <C-F> a:ide
