@@ -94,3 +94,4 @@ sethandler <C-U> a:vim
 sethandler <C-V> a:ide
 sethandler <C-X> a:ide
 sethandler <A-]> a:vim
+sethandler <A-[> a:vim
