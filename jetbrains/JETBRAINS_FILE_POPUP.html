@@ -1,13 +1,27 @@
 <html>
 <pre>
 === IDEA Vim Keybindings Help ===
+-- Navigation --
+  -- Global --
+    Ctrl-i
+    Ctrl-o
 
--- Scrolling & Centering --
-• Ctrl-D: Scroll down half a page and recenter the view.
-• Ctrl-U: Scroll up half a page and recenter the view.
+  -- Inside Buffer --
+    -- Error Navigation --
+    • [d: Jump to the next error.
+    • ]d: Jump to the previous error.
+    • Leader+dw (Space + dw): Open the Problems View Tool Window.
+
+  -- Between Buffers
+
+-- Layout --
+  • Leader+e (Space + e): Activate the Project Tool Window.
+  • Leader+t (Space + t): Activate the Terminal Tool Window.
+  • Leader+r (Space + r): Reopen the last closed tab.
+
 
 -- Change Next Occurrence --
-• Leader+j (Space + j): Search for the word under the cursor, then jump back and start a change on the next match.
+• Leader+j (Space + j): Removed work under cursor and goes into insert mode without overwriting the default register.
 
 -- Deletion & Pasting --
 • x (Normal mode): Delete a character without overwriting the default register.
@@ -32,20 +46,11 @@
     – Shift+Left: Stretch the split to the left.
 • Alt+[ and Alt+]: Cycle between splitters (next/previous).
 
--- Error Navigation --
-• [d: Jump to the next error.
-• ]d: Jump to the previous error.
-• Leader+dw (Space + dw): Open the Problems View Tool Window.
 
 -- Fuzzier Plugin Commands --
 • Leader+pf (Space + pf): Launch Fuzzier search.
 • Leader+mf (Space + mf): Activate Fuzzy Mover.
 • Leader+gf (Space + gf): Launch Fuzzier VCS search.
-
--- IDE Actions --
-• Leader+e (Space + e): Activate the Project Tool Window.
-• Leader+t (Space + t): Activate the Terminal Tool Window.
-• Leader+r (Space + r): Reopen the last closed tab.
 
 -- Key Handler Settings --
 • IDE-handled keys: Ctrl-A, Ctrl-C, Ctrl-F, Ctrl-K, Ctrl-R, Ctrl-S, Ctrl-V, Ctrl-X.

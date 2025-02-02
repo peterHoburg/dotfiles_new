@@ -42,6 +42,8 @@ nnoremap <leader>j *``cgn
 nnoremap x "_x
 vnoremap p "_dP
 " nnoremap <leader>lw <cmd>set wrap!<CR>
+vnoremap < < gv
+vnoremap > > gv
 
 " Don't use Ex mode, use Q for formatting.
 map Q gq
