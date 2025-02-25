@@ -77,6 +77,9 @@ map <Leader>pf <action>(com.mituuz.fuzzier.Fuzzier)
 map <Leader>mf <action>(com.mituuz.fuzzier.FuzzyMover)
 map <Leader>gf <action>(com.mituuz.fuzzier.FuzzierVCS)
 
+" String Manipulation
+map <Leader>sr <action>(osmedile.intellij.stringmanip.RepeatAction)
+
 " Map vim bindings to IDE actions. To get IDE actions set `IdeaVim: track action IDs` in the settings to true
 map <leader>e <Action>(ActivateProjectToolWindow)
 map <leader>t <Action>(ActivateTerminalToolWindow)
