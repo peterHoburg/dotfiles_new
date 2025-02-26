@@ -73,9 +73,10 @@ map ]d <Action>(GotoPreviousError)
 map <leader>dw <Action>(ActivateProblemsViewToolWindow)
 
 " Fuzzier
-map <Leader>pf <action>(com.mituuz.fuzzier.Fuzzier)
-map <Leader>mf <action>(com.mituuz.fuzzier.FuzzyMover)
-map <Leader>gf <action>(com.mituuz.fuzzier.FuzzierVCS)
+map <Leader>fp <action>(com.mituuz.fuzzier.Fuzzier)
+map <Leader>fm <action>(com.mituuz.fuzzier.FuzzyMover)
+map <Leader>fg <action>(com.mituuz.fuzzier.FuzzierVCS)
+map <Leader>ff <action>(com.mituuz.fuzzier.FuzzyGrep)
 
 " String Manipulation
 map <Leader>sr <action>(osmedile.intellij.stringmanip.RepeatAction)
